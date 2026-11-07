@@ -140,3 +140,52 @@ export const deleteVideo = async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+// Like and dislike: clicking the same button again removes the reaction
+const react = (type) => async (req, res) => {
+  try {
+    const { id } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "Invalid video ID" });
+    }
+
+    const video = await Video.findById(id);
+    if (!video) {
+      return res.status(404).json({ message: "Video not found" });
+    }
+
+    const userId = req.user._id;
+    const isLike = type === "like";
+    const mine = isLike ? video.likedBy : video.dislikedBy;
+    const other = isLike ? video.dislikedBy : video.likedBy;
+    const field = isLike ? "likes" : "dislikes";
+    const otherField = isLike ? "dislikes" : "likes";
+
+    const already = mine.some((u) => u.toString() === userId.toString());
+    const otherHad = other.some((u) => u.toString() === userId.toString());
+
+    if (already) {
+      mine.pull(userId);
+      video[field] = Math.max(0, video[field] - 1);
+    } else {
+      mine.push(userId);
+      video[field] += 1;
+      if (otherHad) {
+        other.pull(userId); // a user cannot like and dislike together
+        video[otherField] = Math.max(0, video[otherField] - 1);
+      }
+    }
+
+    await video.save();
+    res.status(200).json({
+      likes: video.likes,
+      dislikes: video.dislikes,
+      liked: video.likedBy.some((u) => u.toString() === userId.toString()),
+      disliked: video.dislikedBy.some((u) => u.toString() === userId.toString()),
+    });
+  } catch (error) {
+    res.status(500).json({ message: "Server error", error: error.message });
+  }
+};
+
+export const likeVideo = react("like");
+export const dislikeVideo = react("dislike");

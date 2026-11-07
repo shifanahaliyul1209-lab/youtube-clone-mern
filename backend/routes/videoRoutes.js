@@ -5,6 +5,8 @@ import {
   createVideo,
   updateVideo,
   deleteVideo,
+  likeVideo,
+  dislikeVideo,
 } from "../controllers/videoController.js";
 import { protect } from "../middleware/authMiddleware.js";
 
@@ -15,5 +17,7 @@ router.get("/:id", getVideoById); // GET /api/videos/:id
 router.post("/", protect, createVideo); // POST /api/videos
 router.put("/:id", protect, updateVideo); // PUT /api/videos/:id
 router.delete("/:id", protect, deleteVideo); // DELETE /api/videos/:id
+router.post("/:id/like", protect, likeVideo); // POST /api/videos/:id/like
+router.post("/:id/dislike", protect, dislikeVideo); // POST /api/videos/:id/dislike
 
 export default router;
