@@ -58,3 +58,21 @@ button { cursor: pointer; font-family: inherit; }
 .success-msg { color: #1a7f37; font-size: 14px; }
 .auth-switch { margin-top: 8px; font-size: 14px; }
 .auth-switch a { color: #065fd4; font-weight: bold; }
+/* Video player page */
+.player-page { max-width: 900px; margin: 0 auto; }
+.player { width: 100%; max-height: 520px; background: #000; border-radius: 12px; }
+.player-title { margin-top: 12px; font-size: 20px; }
+.player-meta { color: #606060; font-size: 14px; margin: 4px 0 10px; }
+.player-actions { display: flex; gap: 10px; margin-bottom: 12px; }
+.react-btn { padding: 8px 16px; border: none; border-radius: 20px; background: #f2f2f2; font-size: 15px; }
+.react-btn.active { background: #0f0f0f; color: #fff; }
+.player-desc { background: #f2f2f2; padding: 12px; border-radius: 12px; margin-bottom: 20px; }
+.comments-title { margin-bottom: 12px; }
+.comment-form { display: flex; gap: 8px; margin-bottom: 20px; }
+.comment-form input, .comment-edit input { flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; }
+.comment-form button, .comment-edit button, .comment-actions button { padding: 6px 12px; border: none; border-radius: 16px; background: #065fd4; color: #fff; }
+.comment { margin-bottom: 16px; }
+.comment-user { font-size: 13px; font-weight: bold; margin-bottom: 2px; }
+.comment-actions { display: flex; gap: 8px; margin-top: 4px; }
+.comment-actions button { background: #f2f2f2; color: #0f0f0f; }
+.comment-edit { display: flex; gap: 8px; }

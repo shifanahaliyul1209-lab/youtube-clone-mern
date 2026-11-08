@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar.jsx";
 import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
+import VideoPlayer from "./pages/VideoPlayer.jsx";
 
 // Main layout: header on top, toggleable sidebar on the left, page on the right
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/video/:id" element={<VideoPlayer />} />
           </Routes>
         </main>
       </div>
