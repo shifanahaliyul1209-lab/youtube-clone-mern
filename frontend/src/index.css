@@ -48,3 +48,13 @@ button { cursor: pointer; font-family: inherit; }
   .search { order: 3; flex-basis: 100%; max-width: none; }
   .content { padding: 10px; }
 }
+/* Login and register */
+.auth-page { display: flex; justify-content: center; padding: 30px 10px; }
+.auth-form { width: 100%; max-width: 380px; display: flex; flex-direction: column; gap: 8px; padding: 28px; border: 1px solid #ddd; border-radius: 12px; }
+.auth-form h2 { margin-bottom: 8px; }
+.auth-form input { padding: 10px; font-size: 15px; border: 1px solid #ccc; border-radius: 6px; }
+.auth-btn { margin-top: 10px; padding: 10px; border: none; border-radius: 20px; background: #065fd4; color: #fff; font-size: 15px; font-weight: bold; }
+.field-error { color: #c00; font-size: 13px; }
+.success-msg { color: #1a7f37; font-size: 14px; }
+.auth-switch { margin-top: 8px; font-size: 14px; }
+.auth-switch a { color: #065fd4; font-weight: bold; }
