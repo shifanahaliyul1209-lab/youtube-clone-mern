@@ -6,7 +6,7 @@ import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import VideoPlayer from "./pages/VideoPlayer.jsx";
-
+import Channel from "./pages/Channel.jsx";
 // Main layout: header on top, toggleable sidebar on the left, page on the right
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -22,6 +22,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/video/:id" element={<VideoPlayer />} />
+            <Route path="/channel" element={<Channel />} />
           </Routes>
         </main>
       </div>

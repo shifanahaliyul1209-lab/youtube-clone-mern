@@ -76,3 +76,16 @@ button { cursor: pointer; font-family: inherit; }
 .comment-actions { display: flex; gap: 8px; margin-top: 4px; }
 .comment-actions button { background: #f2f2f2; color: #0f0f0f; }
 .comment-edit { display: flex; gap: 8px; }
+/* Channel page */
+.channel-page { max-width: 1000px; margin: 0 auto; }
+.channel-banner { display: flex; align-items: center; gap: 20px; padding: 20px; background: #f2f2f2; border-radius: 12px; margin-bottom: 20px; }
+.channel-avatar { width: 80px; height: 80px; border-radius: 50%; background: #065fd4; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 34px; font-weight: bold; flex-shrink: 0; }
+.video-form { display: flex; flex-direction: column; gap: 8px; padding: 16px; border: 1px solid #ddd; border-radius: 12px; margin-bottom: 24px; }
+.video-form input, .video-form select { padding: 9px; font-size: 15px; border: 1px solid #ccc; border-radius: 6px; }
+.video-form-buttons { display: flex; gap: 10px; }
+.video-form-buttons .auth-btn { margin-top: 0; padding: 9px 20px; }
+.cancel-btn { padding: 9px 20px; border: 1px solid #ccc; border-radius: 20px; background: #fff; }
+.channel-videos-title { margin-bottom: 12px; }
+.channel-video img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: #ddd; }
+.channel-video h4 { margin: 8px 0 2px; }
+.channel-video p { font-size: 13px; color: #606060; }
