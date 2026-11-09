@@ -9,7 +9,7 @@ import VideoPlayer from "./pages/VideoPlayer.jsx";
 import Channel from "./pages/Channel.jsx";
 // Main layout: header on top, toggleable sidebar on the left, page on the right
 function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth > 768);
 
   return (
     <>

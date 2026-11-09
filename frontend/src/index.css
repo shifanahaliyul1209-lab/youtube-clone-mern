@@ -89,3 +89,19 @@ button { cursor: pointer; font-family: inherit; }
 .channel-video img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: #ddd; }
 .channel-video h4 { margin: 8px 0 2px; }
 .channel-video p { font-size: 13px; color: #606060; }
+/* Extra responsive fixes */
+@media (max-width: 768px) {
+  .sidebar { display: block; position: fixed; top: 53px; left: 0; z-index: 20; background: #fff; box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15); }
+  .content { padding: 12px; }
+  .channel-banner { flex-direction: column; text-align: center; }
+  .player-title { font-size: 18px; }
+}
+@media (max-width: 600px) {
+  .header { flex-wrap: wrap; padding: 8px 10px; }
+  .header-right { margin-left: auto; gap: 8px; }
+  .video-grid { grid-template-columns: 1fr; }
+  .comment-form, .comment-edit { flex-wrap: wrap; }
+  .comment-form input, .comment-edit input { min-width: 0; width: 100%; }
+  .auth-form { padding: 18px; }
+  .video-form-buttons { flex-wrap: wrap; }
+}
