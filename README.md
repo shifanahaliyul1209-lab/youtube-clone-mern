@@ -3,7 +3,7 @@
 A full-stack YouTube clone built with MongoDB, Express, React (Vite) and Node.js.
 
 **GitHub Repository:** https://github.com/shifanahaliyul1209-lab/youtube-clone-mern
-**Demo Video:** PASTE-YOUR-VIDEO-LINK-HERE
+**Demo Video:** https://drive.google.com/file/d/1UwOcqsxd9rLKJmuddXr5nI0ZOsI6YJvn/view?usp=sharing
 
 ## Features
 - Home page with YouTube-style header, toggleable sidebar, 6 category filters and a video grid
