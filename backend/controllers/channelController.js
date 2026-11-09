@@ -1,3 +1,4 @@
+// Channel controller: create a channel and fetch channels with their videos
 import mongoose from "mongoose";
 import Channel from "../models/Channel.js";
 import User from "../models/User.js";

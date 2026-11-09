@@ -1,3 +1,4 @@
+// Auth controller: handles user registration and login with JWT
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";

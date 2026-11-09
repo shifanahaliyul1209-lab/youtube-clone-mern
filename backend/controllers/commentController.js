@@ -1,3 +1,4 @@
+// Comment controller: list, add, edit and delete comments on a video
 import mongoose from "mongoose";
 import Comment from "../models/Comment.js";
 import Video from "../models/Video.js";

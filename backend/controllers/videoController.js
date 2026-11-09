@@ -1,3 +1,4 @@
+// Video controller: list with search and filter, get one, upload, edit, delete, like and dislike
 import mongoose from "mongoose";
 import Video from "../models/Video.js";
 import Channel from "../models/Channel.js";
