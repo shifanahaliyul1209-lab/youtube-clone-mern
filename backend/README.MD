@@ -150,3 +150,9 @@ Protected routes need the header `Authorization: Bearer <token>`.
 
 
 ![Channel](screenshots/channel.png)
+## Future Improvements
+
+- Subscribe button and subscriber count
+- Nested comment replies
+- Video upload from the device
+- Watch history and playlists
